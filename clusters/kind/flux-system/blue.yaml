@@ -4,6 +4,7 @@ metadata:
   labels:
     app: blue
   name: blue
+  namespace: default
 spec:
   replicas: 1
   selector:
