@@ -19,6 +19,7 @@ spec:
         name: flux-system
   interval: 1m0s
   targetNamespace: dockercoins-generic
+  releaseName: hasher
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
@@ -35,6 +36,7 @@ spec:
         name: flux-system
   interval: 1m0s
   targetNamespace: dockercoins-generic
+  releaseName: rng
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
@@ -51,6 +53,7 @@ spec:
         name: flux-system
   interval: 1m0s
   targetNamespace: dockercoins-generic
+  releaseName: worker
   values:
     livenessProbe: null
     readinessProbe: null
@@ -71,6 +74,7 @@ spec:
         name: flux-system
   interval: 1m0s
   targetNamespace: dockercoins-generic
+  releaseName: webui
   values:
     service:
       type: NodePort
@@ -90,6 +94,7 @@ spec:
         name: flux-system
   interval: 1m0s
   targetNamespace: dockercoins-generic
+  releaseName: redis
   values:
     service:
       port: 6379
