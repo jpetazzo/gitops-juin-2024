@@ -12,3 +12,8 @@ spec:
     kind: GitRepository
     name: flux-system
   targetNamespace: dockercoins-yaml
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: dockercoins-yaml
